@@ -1,37 +1,39 @@
 # Smart-Ration-Distribution-System
 IoT-based anti-corruption ration distribution device using Arduino
-# Smart Ration Distribution System
+# Smart Ration Distribution System 🌾
 
 ## Project Overview
-An IoT-based automated ration distribution device designed to eliminate corruption in India's Public Distribution System (PDS).
+An advanced IoT-based automated ration distribution machine designed to eliminate corruption and theft in India's Public Distribution System (PDS). This system ensures 100% transparency using biometric/card authentication and automated dispensing.
 
-## Hardware Components
-- Arduino Mega & UNO
-- Ultrasonic Sensor (HC-SR04)
-- Load Cell / FSR (Pressure Sensor)
-- SIM900A GSM Module
-- 4x1 Keypad (PIN Entry)
-- LCD Display (16x2)
-- SD Card Module
-- LEDs (Indicators)
+## 🛠 Hardware Components
+- **Controller:** Arduino Mega 2560 & Arduino UNO
+- **Authentication:** RFID Reader (MFRC522) & 4x1 Keypad
+- **Sensors:** Ultrasonic Sensor (HC-SR04) & Load Cell/FSR (Weight Sensor)
+- **Actuators:** Servo Motor (Automatic Valve Control for Grain Dispensing)
+- **Communication:** SIM900A GSM Module (SMS Alerts)
+- **Display:** 16x2 LCD Display (User Interface)
+- **Storage:** SD Card Module (Offline Data Logging)
+- **Indicators:** LEDs (Green/Red Status Lights)
 
-## How It Works
-1. Beneficiary enters a secure PIN on the keypad
-2. LCD displays user details and quota
-3. System verifies correct weight via sensors
-4. SMS alert sent to user's mobile
-5. Transaction saved on SD Card
+## ⚙️ How It Works
+1. **Login:** Beneficiary scans their **RFID Smart Card** or enters PIN via Keypad.
+2. **Verification:** System checks database; LCD displays Name & Available Quota.
+3. **Dispensing:** **Servo Motor** opens the valve to release grain.
+4. **Weighing:** Sensors monitor real-time weight; Servo closes automatically when exact weight (e.g., 5kg) is reached.
+5. **Alert & Record:**
+   - **SMS** sent to user: "Your 5kg ration distributed successfully."
+   - **Data** (Time, Weight, ID) saved to **SD Card**.
 
-## Features
-- **Anti-Corruption:** Automated weighing prevents theft
-- **Digital Receipt:** SMS proof for transparency
-- **Offline Backup:** SD Card stores all records
-- **Paperless:** Eco-friendly system
+## 🚀 Key Features
+- **Automated Dispensing:** Servo motor ensures exact quantity; no manual cheating.
+- **Smart Authentication:** RFID prevents fake users.
+- **Paperless:** Digital records save trees (Environment Friendly).
+- **Offline Mode:** Works in villages without internet (SD Card backup).
 
-## UN SDG Alignment
-- SDG 2: Zero Hunger
-- SDG 16: Peace, Justice & Strong Institutions
-- SDG 9: Innovation & Infrastructure
+## 🌍 UN SDG Alignment
+- **SDG 2:** Zero Hunger (Food Security)
+- **SDG 16:** Peace, Justice & Strong Institutions (Anti-Corruption)
+- **SDG 12:** Responsible Consumption & Production (No Wastage)
 
 ## License
 MIT License
